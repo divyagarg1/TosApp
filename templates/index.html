@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <title>Terms of Service Summarizer</title>
+ 
+ 
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../static/js/jquery-3.1.1.min.js"></script>
+    <script src="../static/js/summarize.js"></script>
+ 
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+ 	
+ 
+</head>
+ 
+<body>
+ 
+    <div class="container">
+        <div class="header">
+            <h3 class="text-muted">Terms of Service Summarizer</h3>
+        </div>
+        
+        <div class="jumbotron">
+        	<form class="form-signin">
+        		<label for="inputText" class="sr-only">Paste your ToS here:</label>
+        		<textarea rows="10" cols="100" name="inputText" id="inputText" class="form-control" placeholder="Paste your ToS here" required autofocus></textarea>
+<!--         		<input type="textarea" name="inputText" id="inputText" class="form-control" placeholder="Text" required autofocus> -->
+        		<button id="btnSummarize" class="btn  btn-primary btn-block" type="button">Summarize</button>
+        	</form>
+        </div>
+        
+        <div>
+        	<label id="result"></label> 
+        </div>
+       
+ 
+        <footer class="footer">
+            <p>&copy; NLP Project</p>
+        </footer>
+ 
+    </div>
+</body>
+ 
+</html>
+
