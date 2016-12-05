@@ -5,6 +5,7 @@ $(function() {
             data: $('form').serialize(),
 	    method: 'POST',
             success: function(response) {
+            	
             	var list = $('<ul />'); // create UL
 				extractResult(list, $.parseJSON(response));   // run function and fill the UL with LI's
                $('#result').html(list)
@@ -13,14 +14,17 @@ $(function() {
                 console.log(error);
             }
         });
-    });
-    
+    });  
    
 
 	function extractResult(list, result){     
-    	jQuery.each(result, function(index, value) {
+    	jQuery.each(result, function(key, value) {
         // create a LI for each iteration and append to the UL
-        $('<li />', {text: value}).appendTo(list);
+        $('<label />', {text: key}).appendTo(list);
+        	jQuery.each(value, function(key, point) {
+        		$('<li />', {text: point}).appendTo(list);});
+        $('<br/>').appendTo(list);	
+        // $('<li />', {text: value}).appendTo(list);
     });
 }
 });
