@@ -59,9 +59,32 @@ def summarizeAlgo(_text):
 	'Trade Secret',\
 	'Work For Hire']
 	
-	privacy = ["privacy"]
+	privacy = ['access',\
+	'account',\
+	'activity',\
+	'advertising',\
+	'confidentiality',\
+	'content',\
+	'cookie',\
+	'legal',\
+	'preferences',\
+	'privacy',\
+	'protect',\
+	'religion',\
+	'security',\
+	'settings']
+
+	termination = ['cease',\
+	'terminate',\
+	'remove',\
+	'inactive',\
+	'suspend',\
+	'account',\
+	'discontinue',\
+	'revoke',\
+	'retain']
 	
-	copyright_all,privacy_all = [],[]
+	copyright_all,privacy_all,termination_all = [],[],[]
 	
 	for para in tos_text_paras:
 		check = 0
@@ -72,6 +95,9 @@ def summarizeAlgo(_text):
 			if word in privacy:
 				privacy_all.append(para)
 				check = 1
+			if word in termination:
+				termination_all.append(para)
+				check = 1
 			if check != 0:
 				break
 	
@@ -79,6 +105,8 @@ def summarizeAlgo(_text):
 	
 	privacy_all = [sent for sent in privacy_all if len(word_tokenize(sent)) > 5]
 	
+	termination_all = [sent for sent in termination_all if len(word_tokenize(sent)) > 5]
+
 	categoryDict = {}
 	
 	if (len(copyright_all) != 0):
@@ -86,21 +114,21 @@ def summarizeAlgo(_text):
 		if (len(copyright_all) != 1):
 			
 			copyright_text = ' '.join(copyright_all)
-			copyright_all = summarize(copyright_text, split=True, ratio=.5)
-		
-		
-    	categoryDict["Copyright"] = copyright_all
+			copyright_all = summarize(copyright_text, split=True, ratio=.05)
+		categoryDict["Copyright: "] = copyright_all
     	
-	
-	
-	
 	if (len(privacy_all) != 0):
 		if (len(privacy_all) != 1):
 			privacy_text = ' '.join(privacy_all)
-	        privacy_all = summarize(privacy_text, split=True, ratio=.5)
-    	categoryDict["Privacy"] = privacy_all
+	        privacy_all = summarize(privacy_text, split=True, ratio=.05)
+    	categoryDict["Privacy: "] = privacy_all
 	
-	
+	if (len(termination_all) != 0):
+		if (len(termination_all) != 1):
+			termination_text = ' '.join(termination_all)
+	        termination_all = summarize(termination_text, split=True, ratio=.05)
+    	categoryDict["Termination: "] = termination_all
+
 	for key in categoryDict.keys():
 		print key + ":"
     	print categoryDict[key]
