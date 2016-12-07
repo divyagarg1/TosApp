@@ -28,6 +28,7 @@ def create_topic_pars(pars, tokenizer, stemmer, stop_words, ldamodel, word_dicti
         lda_vector = ldamodel[val]
         topic_pars.append([ldamodel.print_topic(max(lda_vector, key=lambda item: item[1])[0]), pars[idx]])
 
+    #print(topic_pars)
     tagged_pars = []
     for topic_name in topic_dictionary:
         topic_words = topic_dictionary[topic_name]
