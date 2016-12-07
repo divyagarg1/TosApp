@@ -16,27 +16,54 @@
  
 <body>
  
-    <div class="container">
+    <div class="container-fluid">
         <div class="header">
-            <h3 class="text-muted">Terms of Service Summarizer</h3>
+        <div class="row">
+    		
+        		<img src="../static/img/terms_of_use.jpg" style="width:50px;height:50px;float:left">
+        	
+        	
+        	<div class="col-sm-11"> <h3 class="text-muted">Terms of Service Summarizer</h3></div>
         </div>
+    	</div>
         
-        <div class="jumbotron">
-        	<form class="form-signin">
-        		<label for="inputText" class="sr-only">Paste your ToS here:</label>
-        		<textarea rows="10" cols="100" name="inputText" id="inputText" class="form-control" placeholder="Paste your ToS here" required autofocus></textarea>
-<!--         		<input type="textarea" name="inputText" id="inputText" class="form-control" placeholder="Text" required autofocus> -->
-        		<button id="btnSummarize" class="btn  btn-primary btn-block" type="button">Summarize</button>
-        	</form>
+    <div class="form-group">
+    <div class="row">
+    	<div class="col-sm-1"> </div>
+      	<div class="col-sm-2">
+      	<div>Click either one of these icons or copy-paste ToS in the text area on the right</div> 
+      	<br/><br/>
+        <a id="fbImg" href="#"><img src="../static/img/facebook.png" style="width:60px;height:50px;"></a>
+        <a id="goImg" href="#"><img src="../static/img/google.png" style="width:60px;height:50px;"></a>
+        <a id="slImg" href="#"><img src="../static/img/slack.png" style="width:60px;height:50px;"></a>
+        <br/>
+        <a id="twImg" href="#"><img src="../static/img/twitter.png" style="width:60px;height:50px;"></a>
+        <a id="spImg" href="#"><img src="../static/img/spotify.png" style="width:60px;height:50px;"></a>
         </div>
-        
-       
-        <div id="result"></div> 
-        
-       
+    
+       <div class="col-sm-8"> 
+        	<div class="jumbotron">
+        		<form class="form-signin">
+        			<label for="inputText" class="sr-only">Paste your ToS here:</label>
+        			<textarea rows="20" cols="100" name="inputText" id="inputText" class="form-control" placeholder="Paste your ToS here" required autofocus></textarea>
+        			<button id="btnSummarize" class="btn  btn-primary btn-block" type="button">Summarize</button>
+        			<button id="btnLDASummarize" class="btn  btn-primary btn-block" type="button">LDA Summarize</button>
+        		</form>
+        	</div>
+        </div>
+        <div class="col-sm-1"> </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-1"> </div>
+        <div class="col-sm-10"> 
+        	<div id="result"></div> 
+        </div>
+        <div class="col-sm-1"> </div>
+       </div>
+    </div>
  
         <footer class="footer">
-            <p>&copy; NLP Project</p>
+            <p>&copy; Terms of Service Summarizer is a part of a class project for NLP course at UC Berkeley. </p>
         </footer>
  
     </div>

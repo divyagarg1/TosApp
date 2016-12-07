@@ -15,6 +15,23 @@ $(function() {
             }
         });
     });  
+    
+     $('#btnLDASummarize').click(function() {
+        $.ajax({
+            url: '/ldasummarize',
+            data: $('form').serialize(),
+	    method: 'POST',
+            success: function(response) {
+
+            	var list = $('<ul />'); // create UL
+				extractResult(list, $.parseJSON(response));   // run function and fill the UL with LI's
+               $('#result').html(list)
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+    });
    
 
 	function extractResult(list, result){     
@@ -26,5 +43,35 @@ $(function() {
         $('<br/>').appendTo(list);	
         // $('<li />', {text: value}).appendTo(list);
     });
-}
+	}
+	
+	$('#fbImg').click(function() {
+	 	jQuery.get('static/img/facebook.txt', function(data) {
+   			$('#inputText').val(data)
+		});
+	})
+	
+	$('#goImg').click(function() {
+	 	jQuery.get('static/img/Google.txt', function(data) {
+   			$('#inputText').val(data)
+		});
+	})
+	
+	$('#slImg').click(function() {
+	 	jQuery.get('static/img/Slack.txt', function(data) {
+   			$('#inputText').val(data)
+		});
+	})
+	
+	$('#spImg').click(function() {
+	 	jQuery.get('static/img/Spotify.txt', function(data) {
+   			$('#inputText').val(data)
+		});
+	})
+	
+	$('#twImg').click(function() {
+	 	jQuery.get('static/img/Twitter.txt', function(data) {
+   			$('#inputText').val(data)
+		});
+	})
 });
