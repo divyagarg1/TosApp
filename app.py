@@ -133,7 +133,7 @@ def summarizeAlgo(_text):
         if (len(copyright_all) != 1):
             copyright_text = ' '.join(copyright_all)
             # categoryDict["CopyrightFull"] = copyright_all
-            copyright_all = summarize(copyright_text, split=True, ratio=.5)
+            copyright_all = summarize(copyright_text, split=True, ratio=.2)
         categoryDict["Copyright"] = copyright_all
 
 
@@ -141,7 +141,7 @@ def summarizeAlgo(_text):
         if (len(privacy_all) != 1):
             privacy_text = ' '.join(privacy_all)
             # categoryDict["PrivacyFull"] = privacy_all
-            privacy_all = summarize(privacy_text, split=True, ratio=.5)
+            privacy_all = summarize(privacy_text, split=True, ratio=.02)
         categoryDict["Privacy"] = privacy_all
 
 
@@ -181,7 +181,11 @@ def summarize_lda(_text):
             #category_dict[cat].append(summarize(par))
 
     for topic in category_dict:
-        category_dict[topic] = summarize(' '.join(category_dict[topic]), split=True, ratio=.5)
+    	if topic == "Privacy":
+    		ratio = .02
+    	else:
+    		ratio = .1
+        category_dict[topic] = summarize(' '.join(category_dict[topic]), split=True, ratio=ratio)
     return category_dict
                                     
 if __name__ == "__main__":

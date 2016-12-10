@@ -9,6 +9,7 @@ $(function() {
             	var list = $('<ul />'); // create UL
 				extractResult(list, $.parseJSON(response));   // run function and fill the UL with LI's
                $('#result').html(list)
+               $(window).scrollTop($('#result').offset().top-20)
             },
             error: function(error) {
                 console.log(error);
@@ -26,6 +27,7 @@ $(function() {
             	var list = $('<ul />'); // create UL
 				extractResult(list, $.parseJSON(response));   // run function and fill the UL with LI's
                $('#result').html(list)
+               $(window).scrollTop($('#result').offset().top-20)
             },
             error: function(error) {
                 console.log(error);
@@ -48,30 +50,35 @@ $(function() {
 	$('#fbImg').click(function() {
 	 	jQuery.get('static/img/facebook.txt', function(data) {
    			$('#inputText').val(data)
+//    			$('#length').html("Total words:"+ data.length)
 		});
 	})
 	
 	$('#goImg').click(function() {
 	 	jQuery.get('static/img/Google.txt', function(data) {
    			$('#inputText').val(data)
+//    			$('#length').html("Total words:"+ data.length)
 		});
 	})
 	
 	$('#slImg').click(function() {
 	 	jQuery.get('static/img/Slack.txt', function(data) {
    			$('#inputText').val(data)
+//    			$('#length').html("Total words:"+ data.length)
 		});
 	})
 	
 	$('#spImg').click(function() {
 	 	jQuery.get('static/img/Spotify.txt', function(data) {
    			$('#inputText').val(data)
+//    			$('#length').html("Total words:"+ data.length)
 		});
 	})
 	
 	$('#twImg').click(function() {
 	 	jQuery.get('static/img/Twitter.txt', function(data) {
    			$('#inputText').val(data)
+//    			$('#length').html("Total words:"+ data.length)
 		});
 	})
 });
