@@ -181,10 +181,10 @@ def summarize_lda(_text):
             #category_dict[cat].append(summarize(par))
 
     for topic in category_dict:
-    	if topic == "Privacy":
-    		ratio = .02
-    	else:
-    		ratio = .1
+        if topic == "Privacy":
+            ratio = .02
+        else:
+            ratio = .1
         category_dict[topic] = summarize(' '.join(category_dict[topic]), split=True, ratio=ratio)
     return category_dict
                                     
