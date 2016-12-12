@@ -188,7 +188,7 @@ def summarize_lda(_text):
         else:
             ratio = .1
         category_dict[topic] = summarize(' '.join(category_dict[topic]), split=True, ratio=ratio)
-    category_dict['copyright'] = ['prueba1', 'prueba2']
+
     return category_dict
                                     
 if __name__ == "__main__":
