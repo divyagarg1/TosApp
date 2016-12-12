@@ -156,9 +156,9 @@ def summarizeAlgo(_text):
     return categoryDict
 
 def summarize_lda(_text):
-    tokenizer = RegexpTokenizer(r'\w+')
-    en_stop = stopwords.words('english')
-    p_stemmer = PorterStemmer()
+    # tokenizer = RegexpTokenizer(r'\w+')
+    # en_stop = stopwords.words('english')
+    # p_stemmer = PorterStemmer()
     # topic_dic = {'Privacy': ['privacy', 'cookie', 'confidentiality', 'account'],
     #              'Copyright': ['copyright', 'infringement', 'dmca', 'intellectual', 'holder', 'agent', 'trademark', 'content'],
     #              'Content Sharing/Use': ['share'],
