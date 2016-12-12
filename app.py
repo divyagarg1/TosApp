@@ -3,7 +3,7 @@ import nltk
 from nltk import word_tokenize
 from gensim.summarization import summarize, keywords
 from nltk.tokenize import RegexpTokenizer
-from stop_words import get_stop_words
+from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 from gensim import corpora, models
 import gensim
@@ -156,7 +156,7 @@ def summarizeAlgo(_text):
 
 def summarize_lda(_text):
     tokenizer = RegexpTokenizer(r'\w+')
-    en_stop = get_stop_words('en')
+    en_stop = stopwords.words('english')
     p_stemmer = PorterStemmer()
     topic_dic = {'Privacy': ['privacy', 'cookie', 'confidentiality', 'account'],
                  'Copyright': ['copyright', 'infringement', 'dmca', 'intellectual', 'holder', 'agent', 'trademark', 'content'],
@@ -181,10 +181,10 @@ def summarize_lda(_text):
             #category_dict[cat].append(summarize(par))
 
     for topic in category_dict:
-    	if topic == "Privacy":
-    		ratio = .02
-    	else:
-    		ratio = .1
+        if topic == "Privacy":
+            ratio = .02
+        else:
+            ratio = .1
         category_dict[topic] = summarize(' '.join(category_dict[topic]), split=True, ratio=ratio)
     return category_dict
                                     
