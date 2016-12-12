@@ -1,4 +1,6 @@
 $(function() {
+
+	// Function to call summarize function using Ajax and display results.
     $('#btnSummarize').click(function() {
         $.ajax({
             url: '/summarize',
@@ -17,6 +19,7 @@ $(function() {
         });
     });  
     
+    // Function to call LDA summarize function using Ajax and display results.
      $('#btnLDASummarize').click(function() {
         $.ajax({
             url: '/ldasummarize',
@@ -36,6 +39,7 @@ $(function() {
     });
    
 
+	// helper function to display results in a list fashion
 	function extractResult(list, result){     
     	jQuery.each(result, function(key, value) {
         // create a LI for each iteration and append to the UL
@@ -43,42 +47,42 @@ $(function() {
         	jQuery.each(value, function(key, point) {
         		$('<li />', {text: point}).appendTo(list);});
         $('<br/>').appendTo(list);	
-        // $('<li />', {text: value}).appendTo(list);
+       
     });
 	}
 	
+	//To load Facebook's TOS in the input text area
 	$('#fbImg').click(function() {
-	 	jQuery.get('static/img/facebook.txt', function(data) {
+	 	jQuery.get('static/data/Facebook.txt', function(data) {
    			$('#inputText').val(data)
-//    			$('#length').html("Total words:"+ data.length)
 		});
 	})
 	
+	//To load Google's TOS in the input text area
 	$('#goImg').click(function() {
-	 	jQuery.get('static/img/Google.txt', function(data) {
+	 	jQuery.get('static/data/Google.txt', function(data) {
    			$('#inputText').val(data)
-//    			$('#length').html("Total words:"+ data.length)
 		});
 	})
 	
+	//To load Slack's TOS in the input text area
 	$('#slImg').click(function() {
-	 	jQuery.get('static/img/Slack.txt', function(data) {
+	 	jQuery.get('static/data/Slack.txt', function(data) {
    			$('#inputText').val(data)
-//    			$('#length').html("Total words:"+ data.length)
 		});
 	})
 	
+	//To load Spotify's TOS in the input text area
 	$('#spImg').click(function() {
-	 	jQuery.get('static/img/Spotify.txt', function(data) {
+	 	jQuery.get('static/data/Spotify.txt', function(data) {
    			$('#inputText').val(data)
-//    			$('#length').html("Total words:"+ data.length)
 		});
 	})
 	
+	//To load Twitter's TOS in the input text area
 	$('#twImg').click(function() {
-	 	jQuery.get('static/img/Twitter.txt', function(data) {
+	 	jQuery.get('static/data/Twitter.txt', function(data) {
    			$('#inputText').val(data)
-//    			$('#length').html("Total words:"+ data.length)
 		});
 	})
 });
