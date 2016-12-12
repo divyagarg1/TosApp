@@ -102,9 +102,9 @@ def summarizeAlgo(_text):
     'revoke',\
     'retain']
 
-    # copyright_all,privacy_all,termination_all = [],[],[]
-    #
-    #
+    copyright_all,privacy_all,termination_all = [],[],[]
+
+
     # for para in tos_text_paras:
     #     check = 0
     #     for word in para.split(" "):
