@@ -7,7 +7,7 @@ $(function() {
             data: $('form').serialize(),
 	    method: 'POST',
             success: function(response) {
-            	console.log(response)
+            	console.log($.parseJSON(response))
             	var list = $('<ul />'); // create UL
 				extractResult(list, $.parseJSON(response));   // run function and fill the UL with LI's
                $('#result').html(list)
