@@ -7,11 +7,12 @@ $(function() {
             data: $('form').serialize(),
 	    method: 'POST',
             success: function(response) {
-            	console.log($.parseJSON(response))
-            	var list = $('<ul />'); // create UL
-				extractResult(list, $.parseJSON(response));   // run function and fill the UL with LI's
-               $('#result').html(list)
-               $(window).scrollTop($('#result').offset().top-20)
+
+            	//var list = $('<ul />'); // create UL
+				//extractResult(list, $.parseJSON(response));   // run function and fill the UL with LI's
+               //$('#result').html(list)
+               //$(window).scrollTop($('#result').offset().top-20)
+               $('#result').html('hola')
             },
             error: function(error) {
                 console.log(error);
