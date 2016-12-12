@@ -152,7 +152,7 @@ def summarizeAlgo(_text):
             # categoryDict["TerminationFull"] = termination_all
             termination_all = summarize(termination_text, split=True, ratio=.2)
         categoryDict["Termination"] = termination_all
-    categoryDict['copyright'] = ['prueba1', 'prueba2']
+
     return categoryDict
 
 def summarize_lda(_text):
@@ -170,23 +170,24 @@ def summarize_lda(_text):
     topic_pars = summarize_methods.create_topic_pars(pars, tokenizer, p_stemmer, en_stop, ldamodel2, dictionary2, topic_dic)
     #print(topic_pars)
 
-    category_dict = {}
-    for topic_par in topic_pars:
-        cat = topic_par[1]
-        par = topic_par[0]
-        if (cat not in category_dict):
-            category_dict[cat] = [par]
-            #category_dict[cat] = [summarize(par)]
-        else:
-            category_dict[cat].append(par)
-            #category_dict[cat].append(summarize(par))
-
-    for topic in category_dict:
-        if topic == "Privacy":
-            ratio = .02
-        else:
-            ratio = .1
-        category_dict[topic] = summarize(' '.join(category_dict[topic]), split=True, ratio=ratio)
+    # category_dict = {}
+    # for topic_par in topic_pars:
+    #     cat = topic_par[1]
+    #     par = topic_par[0]
+    #     if (cat not in category_dict):
+    #         category_dict[cat] = [par]
+    #         #category_dict[cat] = [summarize(par)]
+    #     else:
+    #         category_dict[cat].append(par)
+    #         #category_dict[cat].append(summarize(par))
+    #
+    # for topic in category_dict:
+    #     if topic == "Privacy":
+    #         ratio = .02
+    #     else:
+    #         ratio = .1
+    #     category_dict[topic] = summarize(' '.join(category_dict[topic]), split=True, ratio=ratio)
+    categoryDict['copyright'] = ['prueba1', 'prueba2']
     return category_dict
                                     
 if __name__ == "__main__":
