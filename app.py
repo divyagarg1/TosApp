@@ -172,22 +172,22 @@ def summarize_lda(_text):
     #print(topic_pars)
 
     category_dict = {}
-    # for topic_par in topic_pars:
-    #     cat = topic_par[1]
-    #     par = topic_par[0]
-    #     if (cat not in category_dict):
-    #         category_dict[cat] = [par]
-    #         #category_dict[cat] = [summarize(par)]
-    #     else:
-    #         category_dict[cat].append(par)
-    #         #category_dict[cat].append(summarize(par))
-    #
-    # for topic in category_dict:
-    #     if topic == "Privacy":
-    #         ratio = .02
-    #     else:
-    #         ratio = .1
-    #     category_dict[topic] = summarize(' '.join(category_dict[topic]), split=True, ratio=ratio)
+    for topic_par in topic_pars:
+        cat = topic_par[1]
+        par = topic_par[0]
+        if (cat not in category_dict):
+            category_dict[cat] = [par]
+            #category_dict[cat] = [summarize(par)]
+        else:
+            category_dict[cat].append(par)
+            #category_dict[cat].append(summarize(par))
+
+    for topic in category_dict:
+        if topic == "Privacy":
+            ratio = .02
+        else:
+            ratio = .1
+        category_dict[topic] = summarize(' '.join(category_dict[topic]), split=True, ratio=ratio)
     category_dict['copyright'] = ['prueba1', 'prueba2']
     return category_dict
                                     
