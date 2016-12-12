@@ -11,7 +11,7 @@ def read_file_to_paragraphs(file_path):
     doc = file.read()
     file.close()
     pars = re.split('\n\n+', doc)
-    print('reading %s wich have %d paragraphs' % (file_path, len(pars)))
+    #print('reading %s wich have %d paragraphs' % (file_path, len(pars)))
     return(pars)
 
 def tokenize_and_stem(text, tokenizer, stemmer, stop_words):
@@ -19,9 +19,9 @@ def tokenize_and_stem(text, tokenizer, stemmer, stop_words):
 
 def create_topic_pars(pars, tokenizer, stemmer, stop_words, ldamodel, word_dictionary, topic_dictionary):
     norm_pars = [tokenize_and_stem(par, tokenizer, stemmer, stop_words) for par in pars]
-    print('created normalized paragraphs object of length %d' % len(norm_pars))
+    #print('created normalized paragraphs object of length %d' % len(norm_pars))
     bows = [word_dictionary.doc2bow(text) for text in norm_pars]
-    print('created bag-of-words object of length %d' % len(bows))
+    #print('created bag-of-words object of length %d' % len(bows))
     topic_pars = []
     for idx, val in enumerate(bows):
         lda_vector = ldamodel[val]
