@@ -8,11 +8,11 @@ $(function() {
 	    method: 'POST',
             success: function(response) {
 
-            	//var list = $('<ul />'); // create UL
-				//extractResult(list, $.parseJSON(response));   // run function and fill the UL with LI's
-               //$('#result').html(list)
-               //$(window).scrollTop($('#result').offset().top-20)
-               $('#result').html('hola')
+               var list = $('<ul />'); // create UL
+			   extractResult(list, $.parseJSON(response));   // run function and fill the UL with LI's
+               $('#result').html(list)
+               $(window).scrollTop($('#result').offset().top-20)
+
             },
             error: function(error) {
                 console.log(error);
