@@ -36,96 +36,96 @@ def summarize2():
 
 def summarizeAlgo(_text): 
 
-    tos_text_paras = _text.split("\n")
-    copyright = ['collective work',\
-    'compilation',\
-    'compulsory license',\
-    'copyright',\
-    'copyright holder/copyright owner',\
-    'copyright notice',\
-    'derivative work',\
-    'exclusive right',\
-    'expression',\
-    'fair use',\
-    'first sale doctrine',\
-    'fixation',\
-    'idea',\
-    'infringement',\
-    'intellectual property',\
-    'license',\
-    'master use license',\
-    'mechanical license',\
-    'medium',\
-    'moral rights',\
-    'musical composition',\
-    'parody',\
-    'patent',\
-    'performing rights',\
-    'permission',\
-    'public domain',\
-    'publication/publish',\
-    'right of publicity',\
-    'royalty',\
-    'service mark',\
-    'sound recording',\
-    'statutory damages',\
-    'synchronization license',\
-    'tangible form of expression',\
-    'term',\
-    'title',\
-    'trademark',\
-    'trade secret',\
-    'work for hire']
-
-    privacy = ['access',\
-    'account',\
-    'activity',\
-    'advertising',\
-    'confidentiality',\
-    'content',\
-    'cookie',\
-    'legal',\
-    'preferences',\
-    'privacy',\
-    'protect',\
-    'religion',\
-    'security',\
-    'settings']
-
-    termination = ['cease',\
-    'terminate',\
-    'remove',\
-    'inactive',\
-    'suspend',\
-    'account',\
-    'discontinue',\
-    'revoke',\
-    'retain']
-
-    copyright_all,privacy_all,termination_all = [],[],[]
-
-
-    for para in tos_text_paras:
-        check = 0
-        for word in para.split(" "):
-            word = word.lower()
-            if word in copyright:
-                copyright_all.append(para)
-                check = 1
-            if word in privacy:
-                privacy_all.append(para)
-                check = 1
-            if word in termination:
-                termination_all.append(para)
-                check = 1
-            if check != 0:
-                break
-
-    copyright_all = [sent for sent in copyright_all if len(word_tokenize(sent)) > 5]
-
-    privacy_all = [sent for sent in privacy_all if len(word_tokenize(sent)) > 5]
-
-    termination_all = [sent for sent in termination_all if len(word_tokenize(sent)) > 5]
+    # tos_text_paras = _text.split("\n")
+    # copyright = ['collective work',\
+    # 'compilation',\
+    # 'compulsory license',\
+    # 'copyright',\
+    # 'copyright holder/copyright owner',\
+    # 'copyright notice',\
+    # 'derivative work',\
+    # 'exclusive right',\
+    # 'expression',\
+    # 'fair use',\
+    # 'first sale doctrine',\
+    # 'fixation',\
+    # 'idea',\
+    # 'infringement',\
+    # 'intellectual property',\
+    # 'license',\
+    # 'master use license',\
+    # 'mechanical license',\
+    # 'medium',\
+    # 'moral rights',\
+    # 'musical composition',\
+    # 'parody',\
+    # 'patent',\
+    # 'performing rights',\
+    # 'permission',\
+    # 'public domain',\
+    # 'publication/publish',\
+    # 'right of publicity',\
+    # 'royalty',\
+    # 'service mark',\
+    # 'sound recording',\
+    # 'statutory damages',\
+    # 'synchronization license',\
+    # 'tangible form of expression',\
+    # 'term',\
+    # 'title',\
+    # 'trademark',\
+    # 'trade secret',\
+    # 'work for hire']
+    #
+    # privacy = ['access',\
+    # 'account',\
+    # 'activity',\
+    # 'advertising',\
+    # 'confidentiality',\
+    # 'content',\
+    # 'cookie',\
+    # 'legal',\
+    # 'preferences',\
+    # 'privacy',\
+    # 'protect',\
+    # 'religion',\
+    # 'security',\
+    # 'settings']
+    #
+    # termination = ['cease',\
+    # 'terminate',\
+    # 'remove',\
+    # 'inactive',\
+    # 'suspend',\
+    # 'account',\
+    # 'discontinue',\
+    # 'revoke',\
+    # 'retain']
+    #
+    # copyright_all,privacy_all,termination_all = [],[],[]
+    #
+    #
+    # for para in tos_text_paras:
+    #     check = 0
+    #     for word in para.split(" "):
+    #         word = word.lower()
+    #         if word in copyright:
+    #             copyright_all.append(para)
+    #             check = 1
+    #         if word in privacy:
+    #             privacy_all.append(para)
+    #             check = 1
+    #         if word in termination:
+    #             termination_all.append(para)
+    #             check = 1
+    #         if check != 0:
+    #             break
+    #
+    # copyright_all = [sent for sent in copyright_all if len(word_tokenize(sent)) > 5]
+    #
+    # privacy_all = [sent for sent in privacy_all if len(word_tokenize(sent)) > 5]
+    #
+    # termination_all = [sent for sent in termination_all if len(word_tokenize(sent)) > 5]
 
     categoryDict = {}
 
