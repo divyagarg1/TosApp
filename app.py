@@ -167,7 +167,7 @@ def summarize_lda(_text):
     dictionary2 = corpora.Dictionary.load('lda_dictionary')
     ldamodel2 = gensim.models.ldamodel.LdaModel.load('lda_model')
     pars = re.split('\r?\n\r?\n?', _text)
-    topic_pars = summarize_methods.create_topic_pars(pars, tokenizer, p_stemmer, en_stop, ldamodel2, dictionary2, topic_dic)
+    # topic_pars = summarize_methods.create_topic_pars(pars, tokenizer, p_stemmer, en_stop, ldamodel2, dictionary2, topic_dic)
     #print(topic_pars)
 
     # category_dict = {}
