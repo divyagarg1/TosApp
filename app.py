@@ -36,7 +36,7 @@ def summarize2():
 
 def summarizeAlgo(_text): 
 
-    # tos_text_paras = _text.split("\n")
+    tos_text_paras = _text.split("\n")
     copyright = ['collective work',\
     'compilation',\
     'compulsory license',\
