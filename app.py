@@ -121,11 +121,12 @@ def summarizeAlgo(_text):
             if check != 0:
                 break
 
-    copyright_all = [sent for sent in copyright_all if len(word_tokenize(sent)) > 5]
-
-    privacy_all = [sent for sent in privacy_all if len(word_tokenize(sent)) > 5]
-
-    termination_all = [sent for sent in termination_all if len(word_tokenize(sent)) > 5]
+    #ERROR!!!
+    # copyright_all = [sent for sent in copyright_all if len(word_tokenize(sent)) > 5]
+    #
+    # privacy_all = [sent for sent in privacy_all if len(word_tokenize(sent)) > 5]
+    #
+    # termination_all = [sent for sent in termination_all if len(word_tokenize(sent)) > 5]
 
     categoryDict = {}
 
