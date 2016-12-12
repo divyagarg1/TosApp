@@ -22,7 +22,7 @@ def summarize1():
     _text =  request.form['inputText']
     if _text:
         #return  json.dumps(summarizeAlgo(_text))
-        return json.dumps({'html':'<span>Prueba</span>'})
+        return json.dumps({'Copyright':['prueba']})
     else:
         return json.dumps({'html':'<span>Enter the text</span>'})
 
