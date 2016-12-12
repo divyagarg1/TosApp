@@ -158,11 +158,11 @@ def summarize_lda(_text):
     tokenizer = RegexpTokenizer(r'\w+')
     en_stop = stopwords.words('english')
     p_stemmer = PorterStemmer()
-    topic_dic = {'Privacy': ['privacy', 'cookie', 'confidentiality', 'account'],
-                 'Copyright': ['copyright', 'infringement', 'dmca', 'intellectual', 'holder', 'agent', 'trademark', 'content'],
-                 'Content Sharing/Use': ['share'],
-                 'Cancelation/Termination': ['cease', 'terminate', 'suspend', 'cancel'],
-                 'Modification/Pricing': ['modification', 'pricing', 'change']}
+    # topic_dic = {'Privacy': ['privacy', 'cookie', 'confidentiality', 'account'],
+    #              'Copyright': ['copyright', 'infringement', 'dmca', 'intellectual', 'holder', 'agent', 'trademark', 'content'],
+    #              'Content Sharing/Use': ['share'],
+    #              'Cancelation/Termination': ['cease', 'terminate', 'suspend', 'cancel'],
+    #              'Modification/Pricing': ['modification', 'pricing', 'change']}
     # dictionary2 = corpora.Dictionary.load('lda_dictionary')
     # ldamodel2 = gensim.models.ldamodel.LdaModel.load('lda_model')
     # pars = re.split('\r?\n\r?\n?', _text)
