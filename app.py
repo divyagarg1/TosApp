@@ -170,7 +170,7 @@ def summarize_lda(_text):
     # topic_pars = summarize_methods.create_topic_pars(pars, tokenizer, p_stemmer, en_stop, ldamodel2, dictionary2, topic_dic)
     #print(topic_pars)
 
-    # category_dict = {}
+    category_dict = {}
     # for topic_par in topic_pars:
     #     cat = topic_par[1]
     #     par = topic_par[0]
