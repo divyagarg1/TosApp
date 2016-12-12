@@ -28,7 +28,6 @@ def summarize1():
 @app.route('/ldasummarize', methods=['POST'])
 def summarize2():
     _text = request.form['inputText']
-    summarize_lda(_text)
     if _text:
         return json.dumps(summarize_lda(_text))
     else:
