@@ -37,71 +37,71 @@ def summarize2():
 def summarizeAlgo(_text): 
 
     # tos_text_paras = _text.split("\n")
-    # copyright = ['collective work',\
-    # 'compilation',\
-    # 'compulsory license',\
-    # 'copyright',\
-    # 'copyright holder/copyright owner',\
-    # 'copyright notice',\
-    # 'derivative work',\
-    # 'exclusive right',\
-    # 'expression',\
-    # 'fair use',\
-    # 'first sale doctrine',\
-    # 'fixation',\
-    # 'idea',\
-    # 'infringement',\
-    # 'intellectual property',\
-    # 'license',\
-    # 'master use license',\
-    # 'mechanical license',\
-    # 'medium',\
-    # 'moral rights',\
-    # 'musical composition',\
-    # 'parody',\
-    # 'patent',\
-    # 'performing rights',\
-    # 'permission',\
-    # 'public domain',\
-    # 'publication/publish',\
-    # 'right of publicity',\
-    # 'royalty',\
-    # 'service mark',\
-    # 'sound recording',\
-    # 'statutory damages',\
-    # 'synchronization license',\
-    # 'tangible form of expression',\
-    # 'term',\
-    # 'title',\
-    # 'trademark',\
-    # 'trade secret',\
-    # 'work for hire']
-    #
-    # privacy = ['access',\
-    # 'account',\
-    # 'activity',\
-    # 'advertising',\
-    # 'confidentiality',\
-    # 'content',\
-    # 'cookie',\
-    # 'legal',\
-    # 'preferences',\
-    # 'privacy',\
-    # 'protect',\
-    # 'religion',\
-    # 'security',\
-    # 'settings']
-    #
-    # termination = ['cease',\
-    # 'terminate',\
-    # 'remove',\
-    # 'inactive',\
-    # 'suspend',\
-    # 'account',\
-    # 'discontinue',\
-    # 'revoke',\
-    # 'retain']
-    #
+    copyright = ['collective work',\
+    'compilation',\
+    'compulsory license',\
+    'copyright',\
+    'copyright holder/copyright owner',\
+    'copyright notice',\
+    'derivative work',\
+    'exclusive right',\
+    'expression',\
+    'fair use',\
+    'first sale doctrine',\
+    'fixation',\
+    'idea',\
+    'infringement',\
+    'intellectual property',\
+    'license',\
+    'master use license',\
+    'mechanical license',\
+    'medium',\
+    'moral rights',\
+    'musical composition',\
+    'parody',\
+    'patent',\
+    'performing rights',\
+    'permission',\
+    'public domain',\
+    'publication/publish',\
+    'right of publicity',\
+    'royalty',\
+    'service mark',\
+    'sound recording',\
+    'statutory damages',\
+    'synchronization license',\
+    'tangible form of expression',\
+    'term',\
+    'title',\
+    'trademark',\
+    'trade secret',\
+    'work for hire']
+
+    privacy = ['access',\
+    'account',\
+    'activity',\
+    'advertising',\
+    'confidentiality',\
+    'content',\
+    'cookie',\
+    'legal',\
+    'preferences',\
+    'privacy',\
+    'protect',\
+    'religion',\
+    'security',\
+    'settings']
+
+    termination = ['cease',\
+    'terminate',\
+    'remove',\
+    'inactive',\
+    'suspend',\
+    'account',\
+    'discontinue',\
+    'revoke',\
+    'retain']
+
     # copyright_all,privacy_all,termination_all = [],[],[]
     #
     #
