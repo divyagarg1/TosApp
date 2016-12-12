@@ -129,29 +129,29 @@ def summarizeAlgo(_text):
 
     categoryDict = {}
 
-    if (len(copyright_all) != 0):
-        if (len(copyright_all) != 1):
-            copyright_text = ' '.join(copyright_all)
-            # categoryDict["CopyrightFull"] = copyright_all
-            copyright_all = summarize(copyright_text, split=True, ratio=.2)
-        categoryDict["Copyright"] = copyright_all
-
-
-    if (len(privacy_all) != 0):
-        if (len(privacy_all) != 1):
-            privacy_text = ' '.join(privacy_all)
-            # categoryDict["PrivacyFull"] = privacy_all
-            privacy_all = summarize(privacy_text, split=True, ratio=.02)
-        categoryDict["Privacy"] = privacy_all
-
-
-    if (len(termination_all) != 0):
-        if (len(termination_all) != 1):
-            termination_text = ' '.join(termination_all)
-            # categoryDict["TerminationFull"] = termination_all
-            termination_all = summarize(termination_text, split=True, ratio=.2)
-        categoryDict["Termination"] = termination_all
-                              
+    # if (len(copyright_all) != 0):
+    #     if (len(copyright_all) != 1):
+    #         copyright_text = ' '.join(copyright_all)
+    #         # categoryDict["CopyrightFull"] = copyright_all
+    #         copyright_all = summarize(copyright_text, split=True, ratio=.2)
+    #     categoryDict["Copyright"] = copyright_all
+    #
+    #
+    # if (len(privacy_all) != 0):
+    #     if (len(privacy_all) != 1):
+    #         privacy_text = ' '.join(privacy_all)
+    #         # categoryDict["PrivacyFull"] = privacy_all
+    #         privacy_all = summarize(privacy_text, split=True, ratio=.02)
+    #     categoryDict["Privacy"] = privacy_all
+    #
+    #
+    # if (len(termination_all) != 0):
+    #     if (len(termination_all) != 1):
+    #         termination_text = ' '.join(termination_all)
+    #         # categoryDict["TerminationFull"] = termination_all
+    #         termination_all = summarize(termination_text, split=True, ratio=.2)
+    #     categoryDict["Termination"] = termination_all
+    categoryDict['copyright'] = ['prueba1', 'prueba2']
     return categoryDict
 
 def summarize_lda(_text):
